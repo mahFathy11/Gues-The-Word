@@ -1,0 +1,121 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root{
+    --padding:10px;
+    --gap:6px;
+}
+header{
+    padding: var(--trans);
+    text-align: center;
+    background-color: white;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 15px;
+}
+.container{
+    background-color: #eee;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    margin: auto;
+}
+.main-game .tries .try{
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0.6;
+    pointer-events: none;
+}
+.main-game .try.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.main-game .try span:first-child{
+    color: #546E7A;
+    font-size: 20px;
+    font-weight: bold;
+}
+.main-game .try .inputs{
+    display: flex;
+    gap: var(--gap);
+}
+.main-game .try .inputs input{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+    caret-color: orange;
+    font-size: 25px;
+    padding: 6px;    
+}
+.color .head{
+    text-align: center;
+    padding: var(--padding);
+    font-size: 20px;
+    font-weight: bold;
+}
+.color .info>div{
+    background-color: white;
+    padding: 10px 15px;
+    margin-bottom: var(--padding);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+}
+.color .info>div span:first-child{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.color .info .orange span.orange{
+    background-color: #F57C00;
+}
+.color .info .green span.green{
+    background-color: #388E3C;
+}
+.color .info .black span.black{
+    background-color: #37474F;
+}
+.main-game .check{
+    display: flex;
+    gap: var(--padding);
+}
+.main-game .check input,.main-game .check .hint{
+    color: white;
+    padding: var(--padding);
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    outline:none;
+    cursor: pointer;
+}
+.main-game .check input{
+    background-color: #E53935;
+    flex: 1;
+    border: none;
+}
+.main-game .check .hint{
+    background-color: #009688;
+}
+.main-game .check .hint span{
+    padding: var(--gap);
+}
+.end{
+    opacity: 0.6;
+    pointer-events: none;
+}
